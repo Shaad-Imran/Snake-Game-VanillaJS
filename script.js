@@ -4,6 +4,7 @@ const instructionTextElement = document.getElementById("instruction-text");
 const logoElement = document.getElementById("logo");
 const scoreElement = document.getElementById("score");
 const highScoreTextElement = document.getElementById("highScore");
+const mobileWarningElement = document.getElementById("mobile-warning");
 
 // Define game variables
 const gridSize = 20;
@@ -14,6 +15,15 @@ let direction = "right";
 let gameInterval;
 let gameSpeedDelay = 200;
 let isGameStarted = false;
+
+// Get the high score from localStorage on page load
+window.addEventListener("load", () => {
+  const storedHighScore = localStorage.getItem("snakeHighScore");
+  if (storedHighScore) {
+    highScore = parseInt(storedHighScore, 10);
+    displayHighScore();
+  }
+});
 
 // Draw game map, snake, food
 function renderGame() {
@@ -194,6 +204,7 @@ function updateHighScore() {
   const currentScore = snake.length - 1;
   if (currentScore > highScore) {
     highScore = currentScore;
+    localStorage.setItem("snakeHighScore", highScore.toString());
     displayHighScore();
   }
 }
