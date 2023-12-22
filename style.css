@@ -121,3 +121,39 @@ body {
 #logo {
   position: absolute;
 }
+
+.mobile-warning {
+  display: none;
+}
+
+/*-----------------------------------*\
+    # MEDIA QUARIES
+  \*-----------------------------------*/
+
+@media (max-width: 600px) {
+  .game-container,
+  #instruction-text,
+  #logo {
+    display: none;
+  }
+
+  .mobile-warning {
+    display: flex;
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    top: 15%;
+    width: 90%;
+    opacity: 0;
+    animation: fadeIn 2.5s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

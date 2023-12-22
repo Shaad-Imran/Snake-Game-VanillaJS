@@ -14,22 +14,15 @@
       rel="stylesheet"
     />
 
-    <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
-    <!-- Page Title -->
     <title>Snake Game</title>
-
-    <!-- External Stylesheet -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- External Script with Defer Attribute -->
     <script src="script.js" defer></script>
   </head>
 
   <body>
     <!-- Game Container -->
-    <div>
+    <section class="game-container">
       <!-- Scores Section -->
       <div class="scores">
         <h1 id="score">000</h1>
@@ -45,12 +38,18 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Instruction Text -->
     <h1 id="instruction-text">Press spacebar to start the game</h1>
 
     <!-- Game Logo -->
     <img id="logo" src="snake.png" alt="snake-logo" />
+
+    <!-- Mobile Warning -->
+    <div class="mobile-warning">
+      Sorry! This game is optimized for larger screens. Please open it on a
+      desktop or laptop for the BEST gaming experience.
+    </div>
   </body>
 </html>
