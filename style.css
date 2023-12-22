@@ -1,0 +1,123 @@
+/*-----------------------------------*\
+  # CUSTOM PROPERTIES
+\*-----------------------------------*/
+
+:root {
+  --main-bg-color: #414141;
+  --border-color-1: #595f43;
+  --border-color-2: #abb78a;
+  --border-color-3: #8b966c;
+  --text-color: #333;
+  --score-color: #abb78a;
+  --highscore-color: #d8ddca;
+  --accent-bg-color: #c4cfa3;
+  --snake-border-color: #5a5a5a;
+  --food-bg-color: #dedede;
+  --food-border-color: #999;
+}
+
+/*-----------------------------------*\
+    # BODY & LAYOUT STYLES
+  \*-----------------------------------*/
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "VT323", monospace;
+  background-color: var(--main-bg-color);
+}
+
+.snake,
+body {
+  background-color: var(--main-bg-color);
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+  border-radius: 100px;
+  margin: 5px;
+}
+
+/*-----------------------------------*\
+    # GAME BORDERS
+  \*-----------------------------------*/
+
+/* Game Border 1 */
+.game-border-1 {
+  border: 10px solid var(--border-color-1);
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 10px var(--border-color-1);
+}
+
+/* Game Border 2 */
+.game-border-2 {
+  border: 8px solid var(--border-color-2);
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 10px var(--border-color-2);
+}
+
+/* Game Border 3 */
+.game-border-3 {
+  border: 30px solid var(--border-color-3);
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 5px var(--border-color-3);
+}
+
+/*-----------------------------------*\
+    # ADDITIONAL STYLES
+  \*-----------------------------------*/
+
+#instruction-text {
+  position: absolute;
+  top: 65%;
+  color: var(--text-color);
+  width: 300px;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 30px;
+  margin: 0;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+}
+
+#score,
+#highScore {
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+#score {
+  color: var(--score-color);
+}
+
+#highScore {
+  color: var(--highscore-color);
+  display: none;
+}
+
+.game-border-3,
+#logo {
+  background-color: var(--accent-bg-color);
+}
+
+.snake {
+  border: 1px dotted var(--snake-border-color);
+}
+
+.food {
+  background-color: var(--food-bg-color);
+  border: 5px solid var(--food-border-color);
+}
+
+#logo {
+  position: absolute;
+}

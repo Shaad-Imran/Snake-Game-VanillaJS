@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Preconnect to External Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- External Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Page Title -->
+    <title>Snake Game</title>
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- External Script with Defer Attribute -->
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Game Container -->
+    <div>
+      <!-- Scores Section -->
+      <div class="scores">
+        <h1 id="score">000</h1>
+        <h1 id="highScore">000</h1>
+      </div>
+
+      <!-- Nested Game Board Structure -->
+      <div class="game-border-1">
+        <div class="game-border-2">
+          <div class="game-border-3">
+            <!-- Game Board Container -->
+            <div id="game-board"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instruction Text -->
+    <h1 id="instruction-text">Press spacebar to start the game</h1>
+
+    <!-- Game Logo -->
+    <img id="logo" src="snake.png" alt="snake-logo" />
+  </body>
+</html>
